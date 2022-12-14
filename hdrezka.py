@@ -48,7 +48,22 @@ def fake_head():
     return _headers
 
 
+def site_block_rkn___(url):
+    # http://rubanlist.com/scripts/get.php?domain=kasparov.ru
+
+    url_without_http = url[url.find('//') + 2:]  # del 'http://'
+    url = f'http://rubanlist.com/scripts/get.php?domain={url_without_http}'
+    r = requests.get(url, headers=fake_head())
+
+    if 'есть в реестре' in r.text:
+        log.info(f'site {url} BLOCK rkn')
+        return True
+    else:
+        log.info(f'site {url} not block rkn')
+
+
 def site_block_rkn(url):
+    # rublacklist.net
     url_without_http = url[url.find('//') + 2:]  # del 'http://'
     url = f'https://reestr.rublacklist.net/ru/?q={url_without_http}'
 
