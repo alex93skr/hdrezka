@@ -54,3 +54,12 @@
 22-Dec-14 06:09:52 [hdrezka] site_available code 200 http://hdrezkabyspub.net
 22-Dec-14 06:09:52 [hdrezka] save_url_file http://hdrezkabyspub.net
 22-Dec-14 06:09:52 [hdrezka] sleep 3600
+22-Dec-24 10:26:13 [hdrezka] open_url_file http://hdrezkabyspub.net
+22-Dec-24 10:26:21 [hdrezka] site https://reestr.rublacklist.net/ru/?q=hdrezkabyspub.net BLOCK rkn
+22-Dec-24 10:26:21 [hdrezka] Updater go
+22-Dec-24 10:26:23 [hdrezka] send_email done
+22-Dec-24 10:26:34 [hdrezka] load_email done
+22-Dec-24 10:26:34 [hdrezka] parsing_url http://hdrezka31dhqq.net done
+22-Dec-24 10:26:39 [hdrezka] site https://reestr.rublacklist.net/ru/?q=hdrezka31dhqq.net not block rkn
+22-Dec-24 10:26:40 [hdrezka] site_available code 200 http://hdrezka31dhqq.net
+22-Dec-24 10:26:40 [hdrezka] sleep 3600

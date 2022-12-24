@@ -79,10 +79,7 @@ def site_block_rkn(url):
         log.info(f'site {url} not block rkn')
 
 
-def site_available(url):
-    if site_block_rkn(url):
-        return False
-
+def site_opens_well(url):
     try:
         r = requests.get(url, headers=fake_head(), allow_redirects=False)
         # print(r.status_code)
@@ -96,6 +93,14 @@ def site_available(url):
     else:
         log.info(f'site NOT available {url} code {r.status_code}')
         return False
+
+
+def site_available(url):
+    if site_block_rkn(url):
+        return False
+
+    # if not site_opens_well(url):
+    #     return False
 
 
 class Appdata:
